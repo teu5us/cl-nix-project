@@ -25,8 +25,9 @@ ARGUMENTS:
     -D/--depends-on  A string containing systems to put in ASDF's :depends-on
     -e/--email       Author's email
     -l/--license     Project license
-    -h/--help           Print usage and exit
-    <target-dir>     Path to directory with quicklisp-to-nix-systems.txt
+    -h/--help        Print usage and exit
+
+<target-dir>     Path to directory with quicklisp-to-nix-systems.txt
 " (uiop:argv0))
   (uiop:quit 2))
 
