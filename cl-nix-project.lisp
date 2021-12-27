@@ -99,6 +99,8 @@ ARGUMENTS:
       (unless (= code 0)
         (e error)
         (uiop:quit 1))
+      (let ((dotgit (uiop:directory-exists-p (format nil "~A/.git/" target-directory))))
+        (when dotgit (uiop:delete-directory-tree dotgit :validate t)))
       (format t "Nix skeleton cloned.~%~%"))
 
     (make-project (pathname target-directory)
