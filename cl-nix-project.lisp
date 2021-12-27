@@ -27,7 +27,7 @@ ARGUMENTS:
     -l/--license     Project license
     -h/--help        Print usage and exit
 
-<target-dir>     Path to directory with quicklisp-to-nix-systems.txt
+    <target-dir>     Target directory to store project
 " (uiop:argv0))
   (uiop:quit 2))
 
