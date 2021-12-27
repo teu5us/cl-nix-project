@@ -8,6 +8,10 @@ The nix skeleton tries to reuse facilities available in nixpkgs to build Common
 Lisp systems and provide a development shell. In the shell sbcl is wrapped with
 the ~lisp~ script, that loads linedit according to its [[https://common-lisp.net/project/linedit/][manual]]. Have a read to
 set up Emacs correctly.
+* Installation
+Can be installed with ~nix-env -f https://github.com/teu5us/cl-nix-project/archive/refs/heads/main.zip -i cl-nix-project~.
+
+Or you can run the thing directly from github: ~nix run github:Teu5us/cl-nix-project -- ARGUMENTS ...~.
 * Usage
 #+begin_example
 Usage:
