@@ -1,0 +1,26 @@
+* CL-NIX-PROJECT
+This is a wrapper around [[https://github.com/fukamachi/cl-project][fukamachi's cl-project]].
+
+When a new project is created, first [[https://github.com/teu5us/cl-nix-project-skeleton][the nix skeleton]] is cloned to the specified
+directory, then cl-project places its files inside there.
+
+The nix skeleton tries to reuse facilities available in nixpkgs to build Common
+Lisp systems and provide a development shell. In the shell sbcl is wrapped with
+the ~lisp~ script, that loads linedit according to its [[https://common-lisp.net/project/linedit/][manual]]. Have a read to
+set up Emacs correctly.
+* Usage
+#+begin_example
+Usage:
+    cl-nix-project [ARGUMENTS ...] <target-dir>
+
+ARGUMENTS:
+    -n/--name        Project name
+    -a/--author      Author name to use
+    -d/--desc        Project description
+    -D/--depends-on  A string containing systems to put in ASDF's :depends-on
+    -e/--email       Author's email
+    -l/--license     Project license
+    -h/--help        Print usage and exit
+
+<target-dir>     Path to directory with quicklisp-to-nix-systems.txt
+#+end_example
